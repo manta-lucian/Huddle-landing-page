@@ -1,0 +1,106 @@
+.header {
+  background: url("../../images/bg-hero-desktop.svg");
+  background-color: $color-very-pale-cyan;
+  object-fit: cover;
+  background-size: 100% 100%;
+  grid-column: 1/-1;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  &__logo {
+    & img {
+      width: 20rem;
+    }
+  }
+  &__btn {
+    background-color: $color-white;
+    &:hover {
+      background-color: $color-grayish-blue;
+      color: $color-primary;
+    }
+  }
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding: 0 5rem 5rem 5rem;
+}
+
+.hero-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 10rem;
+  &__btn {
+    background-color: $color-primary;
+    color: $color-white;
+    text-transform: capitalize;
+    &:hover {
+      background-color: rgba($color-primary, 0.5);
+    }
+  }
+  &__heading {
+    width: 80%;
+    font-family: "Puppins";
+    font-weight: 600;
+    font-size: 4rem;
+  }
+}
+
+.hero-image {
+  align-self: center;
+  & img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .hero-content {
+    &__heading {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero {
+    row-gap: 5rem;
+  }
+  .hero-content {
+    grid-column: 1/-1;
+    text-align: center;
+    justify-self: center;
+    margin-top: 0;
+    &__heading {
+      width: 100%;
+      font-size: 3rem;
+    }
+    &__text {
+      width: 100%;
+      font-size: 1.6rem;
+    }
+    &__btn {
+      font-size: 1.6rem;
+    }
+  }
+  .hero-image {
+    grid-column: 1/-1;
+  }
+  .navigation {
+    padding: 2rem 2rem 5rem 2rem;
+    align-items: center;
+    &__btn {
+      padding: 1rem 2rem;
+    }
+    &__logo {
+      & img {
+        width: 10rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.button {
+  font-size: $fontsize-body;
+  font-family: "Open Sans";
+  padding: 1.5rem 6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
